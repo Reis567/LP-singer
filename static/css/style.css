@@ -6,6 +6,9 @@
     box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
 }
+html {
+    scroll-behavior: smooth; /* Rola suavemente para os elementos ancorados */
+  }
 section{
     position: relative;
     width: 100%;
@@ -17,16 +20,19 @@ section{
     background: #fff;
 }
 
-header{
-    position: absolute;
+header {
+    position: fixed; /* Altera a posição para fixo */
     top: 0;
     left: 0;
     width: 100%;
+    height: 100px;
     padding: 20px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+    background-color: #fff; /* Adicione uma cor de fundo para o header */
+    z-index: 1000; /* Defina um valor alto para o z-index do header */
+  }
 header .logo{
     position: relative;
     max-width: 80px;
@@ -38,7 +44,25 @@ header ul{
 }
 header ul li {
     list-style: none;
+  margin-right: 20px; /* Espaçamento entre os itens */
+  position: relative; /* Necessário para posicionar o pseudo-elemento */
+  transition: transform 0.3s ease;
 }
+
+header ul li::after {
+    content: '';
+  position: absolute;
+  bottom: -5px; /* Posiciona a linha abaixo do item */
+  left: 70%; /* Centraliza horizontalmente a linha */
+  width: 50%; /* Largura reduzida da linha */
+  height: 2px; /* Altura da linha */
+  background-color: #1c5bc4; /* Cor da linha */
+  transform: scaleX(0) translateX(-50%); /* Inicialmente escondido (sem largura) e centralizado */
+  transform-origin: center;
+  transition: transform 0.3s ease;
+  }
+
+
 header ul li a{
     display: inline-block;
     color: #333;
@@ -46,8 +70,25 @@ header ul li a{
     margin-left: 40px;
     text-decoration: none;
 }
+header ul li:hover::after {
+    transform: scaleX(1) translateX(-50%); /* Exibe a linha no hover e centraliza */
+  }
 
 .content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.content2{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.content3{
     position: relative;
     width: 100%;
     display: flex;
@@ -59,7 +100,27 @@ header ul li a{
     position: relative;
     max-width: 600px;
 }
+.content2 .textBox{
+    position: relative;
+    max-width: 600px;
+}
+.content3 .textBox{
+    position: relative;
+    max-width: 600px;
+}
 .content .textBox h2{
+    color: #333;
+    font-size: 3.5em;
+    line-height: 1em;
+    font-weight: 600;
+}
+.content2 .textBox h2{
+    color: #333;
+    font-size: 3.5em;
+    line-height: 1em;
+    font-weight: 600;
+}
+.content3 .textBox h2{
     color: #333;
     font-size: 3.5em;
     line-height: 1em;
@@ -70,13 +131,47 @@ header ul li a{
     font-weight: 900;
     
 }
+.content2 .textBox h2 strong{
+    color: #1c5bc4;
+    font-weight: 900;
+    
+}
+.content3 .textBox h2 strong{
+    color: #1c5bc4;
+    font-weight: 900;
+    
+}
 
 .content .textBox p{
     color: #333;
+    padding-top: 20px;
+    
+
+}
+.content2 .textBox p{
+    color: #333;
+    padding-top: 20px;
+
+}
+.content3 .textBox p{
+    color: #333;
+    padding-top: 20px;
 
 }
 
 .content .textBox a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    color: #fff;
+    background: #1c5bc4;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+}
+.content2 .textBox a{
     display: inline-block;
     margin-top: 20px;
     padding: 8px 20px;
@@ -96,4 +191,70 @@ header ul li a{
     padding-right: 50px;
     margin-top: 50px;
     
+}
+.content2 .imgBox2{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 105px;
+    
+}
+.sci{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 50px;
+    color: #333;
+}
+.sci li{
+    list-style: none;
+
+}
+
+.sci i {
+    color: #1c5bc4;
+}
+
+.sci li a {
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.8);
+    }
+
+.polygon{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: #1c5bc4;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+}
+.manoel-banner{
+    margin-left: 200px;
+    width: 70%;
+}
+.footer {
+    text-align: center;
+    background: #1c5bc4;
+}
+
+.footer a {
+    color: inherit;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.footer p {
+    margin: 0;
+    color: #fff;
+}
+
+.heart {
+    color: red;
 }
