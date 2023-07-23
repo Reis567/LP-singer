@@ -40,7 +40,7 @@ The Manoel Gomes Singer Landing Page consists of several sections, each presenti
 
 This project is open-source, and you are welcome to contribute! If you have suggestions for improvements, fixes, or additional features, feel free to open an "issue" or submit a "pull request" on the GitHub repository.
 
-GitHub Repository: [GitHub - Landing Page Manoel Gomes](https://github.com/Reis567/Landing-Page-Musical-Manoel-Gomes)
+GitHub Repository: [GitHub - Landing Page Manoel Gomes](https://github.com/Reis567/LP-singer)
 
 ## Author
 
@@ -102,7 +102,7 @@ A Página de Landing do Cantor Manoel Gomes é composta por várias seções, ca
 
 Este projeto é de código aberto e você é bem-vindo(a) para contribuir! Se você tiver sugestões de melhorias, correções ou recursos adicionais, sinta-se à vontade para abrir um "issue" ou enviar um "pull request" no repositório do GitHub.
 
-Repositório GitHub: [GitHub - Landing Page Manoel Gomes](https://github.com/Reis567/Landing-Page-Musical-Manoel-Gomes)
+Repositório GitHub: [GitHub - Landing Page Manoel Gomes](https://github.com/Reis567/LP-singer)
 
 ## Autor
 
